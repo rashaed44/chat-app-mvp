@@ -1,16 +1,20 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import Header from '../components/Header';
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>🏠 الرئيسية</Text>
-      <Text>مرحباً! اختر محادثة للبدء أو ابدأ محادثة جديدة من تبويب المحادثات.</Text>
+      <Header title="🏠 الرئيسية" />
+      <View style={styles.body}>
+        <Text style={styles.welcome}>مرحباً! اختر محادثة للبدء أو اضغط على زر + لبدء محادثة جديدة.</Text>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16 },
-  title: { fontSize: 22, fontWeight: '700', marginBottom: 12 },
+  container: { flex: 1, backgroundColor: '#F7F7F8' },
+  body: { flex: 1, padding: 16 },
+  welcome: { fontSize: 16, color: '#333' },
 });
