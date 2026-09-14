@@ -2,6 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { auth, db } from '../lib/firebase';
 import { doc, getDoc } from 'firebase/firestore';
+import { registerForPushNotificationsAsync } from '../lib/pushNotifications';
 
 type AuthContextType = {
   user: User | null;
@@ -24,6 +25,8 @@ export const AuthProvider = ({ children }: any) => {
           const docRef = doc(db, 'users', u.uid);
           const snap = await getDoc(docRef);
           setProfile(snap.exists() ? snap.data() : null);
+          // register for push notifications and save token
+          registerForPushNotificationsAsync();
         } catch (e) {
           setProfile(null);
         }
