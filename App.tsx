@@ -1,24 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import MainTabs from './src/navigation/MainTabs';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>مرحباً بك في تطبيق المحادثة!</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <MainTabs />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
   },
 });
-
