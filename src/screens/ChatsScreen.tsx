@@ -3,6 +3,7 @@ import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native
 import { db } from '../lib/firebase';
 import { collection, query, where, orderBy, onSnapshot } from 'firebase/firestore';
 import { useNavigation } from '@react-navigation/native';
+import { useAuth } from '../contexts/AuthContext';
 
 type Conversation = {
   id: string;
@@ -14,12 +15,13 @@ type Conversation = {
 export default function ChatsScreen() {
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const navigation = useNavigation();
-  const currentUserId = 'CURRENT_USER_ID'; // TODO: replace after auth implemented
+  const { user } = useAuth();
 
   useEffect(() => {
+    if (!user) return;
     const q = query(
       collection(db, 'conversations'),
-      where('members', 'array-contains', currentUserId),
+      where('members', 'array-contains', user.uid),
       orderBy('updatedAt', 'desc')
     );
     const unsub = onSnapshot(q, (snapshot) => {
@@ -27,7 +29,11 @@ export default function ChatsScreen() {
       setConversations(data);
     });
     return () => unsub();
-  }, []);
+  }, [user]);
+
+  if (!user) return (
+    <View style={styles.container}><Text>جاري التحميل...</Text></View>
+  );
 
   return (
     <View style={styles.container}>
