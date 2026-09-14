@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="780" viewBox="0 0 360 780">
+  <rect width="100%" height="100%" fill="#F7F7F8" rx="24"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="360" height="76" fill="#fff"/>
+  <text x="180" y="48" font-size="20" font-family="Arial, Noto Sans, sans-serif" text-anchor="middle">💬 المحادثة</text>
+
+  <!-- Messages area -->
+  <g>
+    <!-- Other message -->
+    <rect x="16" y="96" width="220" height="64" rx="12" fill="#fff" stroke="#EEE"/>
+    <text x="28" y="128" font-size="14" fill="#111">أم حسين: كيف حالك اليوم؟</text>
+    <text x="28" y="146" font-size="11" fill="#999">10:12</text>
+
+    <!-- My message -->
+    <rect x="120" y="176" width="216" height="70" rx="12" fill="#DCF8C6"/>
+    <text x="132" y="204" font-size="14" fill="#111">أنا بخير، شكراً! هذه صورة من المشروع.</text>
+    <rect x="132" y="220" width="180" height="80" rx="8" fill="#EEE"/>
+    <text x="132" y="308" font-size="11" fill="#999">10:15</text>
+
+    <!-- Other message with image -->
+    <rect x="16" y="280" width="220" height="110" rx="12" fill="#fff" stroke="#EEE"/>
+    <text x="28" y="312" font-size="14" fill="#111">أم حسين</text>
+    <rect x="28" y="324" width="180" height="64" rx="8" fill="#EEE"/>
+    <text x="28" y="398" font-size="11" fill="#999">10:20</text>
+  </g>
+
+  <!-- Input area -->
+  <rect x="0" y="680" width="360" height="100" fill="#fff"/>
+  <rect x="16" y="700" width="260" height="44" rx="8" fill="#F0F0F0"/>
+  <text x="32" y="730" font-size="14" fill="#999">اكتب رسالة...</text>
+  <circle cx="312" cy="722" r="20" fill="#2F95DC"/>
+  <text x="312" y="728" font-size="16" text-anchor="middle" fill="#fff">إرسال</text>
+</svg>

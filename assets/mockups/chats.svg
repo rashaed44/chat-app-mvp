@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="780" viewBox="0 0 360 780">
+  <rect width="100%" height="100%" fill="#F7F7F8" rx="24"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="360" height="76" fill="#fff"/>
+  <text x="180" y="48" font-size="20" font-family="Arial, Noto Sans, sans-serif" text-anchor="middle">💬 المحادثات</text>
+
+  <!-- List -->
+  <g>
+    <rect x="16" y="96" width="328" height="76" rx="12" fill="#fff" stroke="#EEE"/>
+    <circle cx="44" cy="134" r="22" fill="#CFE8FF"/>
+    <text x="84" y="124" font-size="15" fill="#111">أم حسين</text>
+    <text x="84" y="144" font-size="13" fill="#666">مرحبا، هل وصلت الرسالة؟</text>
+    <text x="320" y="122" font-size="12" fill="#999" text-anchor="end">الآن</text>
+    <rect x="292" y="132" width="28" height="22" rx="11" fill="#FF3B30"/>
+    <text x="306" y="148" font-size="12" fill="#fff" text-anchor="middle">2</text>
+  </g>
+
+  <g>
+    <rect x="16" y="184" width="328" height="76" rx="12" fill="#fff" stroke="#EEE"/>
+    <circle cx="44" cy="222" r="22" fill="#FFD8B5"/>
+    <text x="84" y="212" font-size="15" fill="#111">مشروع الفريق</text>
+    <text x="84" y="232" font-size="13" fill="#666">تم رفع النسخة الجديدة</text>
+    <text x="320" y="210" font-size="12" fill="#999" text-anchor="end">1 س</text>
+  </g>
+
+  <g>
+    <rect x="16" y="272" width="328" height="76" rx="12" fill="#fff" stroke="#EEE"/>
+    <circle cx="44" cy="310" r="22" fill="#E0FFD8"/>
+    <text x="84" y="300" font-size="15" fill="#111">أحمد</text>
+    <text x="84" y="320" font-size="13" fill="#666">تمام، شكراً</text>
+    <text x="320" y="298" font-size="12" fill="#999" text-anchor="end">2 س</text>
+  </g>
+
+  <!-- Bottom Tabs -->
+  <rect x="0" y="700" width="360" height="80" fill="#fff"/>
+  <text x="36" y="742" font-size="18" text-anchor="middle">🏠</text>
+  <text x="108" y="742" font-size="18" text-anchor="middle">💬</text>
+  <text x="180" y="742" font-size="18" text-anchor="middle">❤️</text>
+  <text x="252" y="742" font-size="18" text-anchor="middle">🔔</text>
+  <text x="324" y="742" font-size="18" text-anchor="middle">👤</text>
+</svg>
